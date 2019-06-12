@@ -14,7 +14,9 @@ $(function(){
 //Show Secondary Nav
 $(document).ready(function(){
   $("#showMenu").click(function(){
-    $("#collapsibleMenu").show();
+	$("#showMenu").addClass('active');
+	$("#showMenu.active").removeClass('active');
+    $("#collapsibleMenu").addClass('expandableMenu');
   });
 });
 
