@@ -174,7 +174,7 @@ nav {
 .tab.active {
     color: #fff;
 }
-.tab.active:before {
+.tab.active:before,.project .tab.project:before {
     content: "";
     display: block;
     width: 100%;
@@ -434,10 +434,10 @@ main {
 .newGods {}
 
 /* Chik Budo */
-.chikbudo,.chikbudo .tab.active:before {
+.chikbudo, .chikbudo .tab.active:before,.chikbudo .tab.project:before {
     background-color:var(--CBCol);
 }
-.chikbudo .tab.active,.chikbudo .blurb li,.chikbudo nav>a:hover {
+.chikbudo .tab.active, .chikbudo .blurb li, .chikbudo nav>a:hover, .chikbudo .tab.project {
     color:var(--CBCol);
 }
 .chikbudo .secondary>.active,.chikbudo .productionNotes {
