@@ -423,7 +423,7 @@ main {
 }
 /* Hero Images by page */
 .heroImage {
-    background-size: cover;
+    background-size: initial;
     background-repeat: no-repeat;
 }
 .chikbudo .heroImage {
@@ -568,6 +568,8 @@ main {
     border-top: none;
     padding: 0;
 }
+.heroImage {
+    background-size: cover;
 .contentHeader {
     margin: 0;
     padding: 3.5rem 2rem 1.75rem;
@@ -622,6 +624,7 @@ main {
 .smallPrint {
     padding:1rem 2rem;
 }
+	
 /* Mobile Grid Layout */
 main {
     display: grid;
