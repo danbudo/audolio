@@ -421,7 +421,16 @@ main {
     display: flex;
     justify-content: space-between;
 }
-
+/* Hero Images by page */
+.heroImage {
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.chikbudo .heroImage {
+    background-image: url('https://a4-images.myspacecdn.com/images03/2/1eb6e79b05f549a7b31e461f2037c225/full.jpg');
+    background-position: 0 -72px;
+    
+}
 /* Colour variants */
 
 /* Ecstatic Temple */
@@ -447,6 +456,7 @@ main {
 .chikbudo .secondary>.active,.chikbudo .productionNotes {
     border-color:var(--CBCol);
 }
+
 /* Resolve header loading "flashing" bug */
 body:before {
     content: "";
@@ -537,7 +547,7 @@ main {
     margin-top: -5px;
     top: 0;
 }
-.siteHeader nav>.tab.active,.siteHeader nav>.tab.project {
+.siteHeader nav>.tab.active,.project .siteHeader nav>.tab.project {
     background-color: #f1f3f4;
     color: #262626;
 }
@@ -565,6 +575,7 @@ main {
     border-top: 1px solid rgba(34, 34, 34, 0.15);
     grid-area: hero;
     text-align: center;
+    color: white;
 }
 .song {
     border-radius: 0;
@@ -621,4 +632,3 @@ main {
     height: 100vh;
 }
 }
-
