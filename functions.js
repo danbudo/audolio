@@ -14,7 +14,7 @@
 //Show Secondary Nav
 $(document).ready(function(){
   $("#showMenu").click(function(){
-	$("#showMenu").addClass('active');
+	//$("#showMenu").addClass('active');
     $("#collapsibleMenu").show();
   });
 });
