@@ -555,8 +555,8 @@ main {
     font-size: 2.2rem
 }
 .content {
-    padding: 2rem 2rem 1.5rem;
-    border-top: none;
+    border-top: 1px solid rgba(34, 34, 34, 0.25);
+    padding: 0;
 }
 .contentHeader {
     margin: 0;
