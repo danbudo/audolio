@@ -454,7 +454,7 @@ body:before {
     width: 100%;
     height: 69px;
 }
-#siteHeader {
+.audolio {
     margin-top: -69px;
 }
 
@@ -610,6 +610,13 @@ main {
 }
 .smallPrint {
     padding:1rem 2rem;
+}
+/* header loading jump bug */
+body:before {
+    height: 93px;
+}
+.audolio {
+    margin-top: -93px;
 }
 /* Mobile Grid Layout */
 main {
