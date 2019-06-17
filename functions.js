@@ -18,7 +18,6 @@ $(document).ready(function() {
 
 // Remove "expanded" class on mobile, until clicked
 
-<script>
 function collapseMenuMobile(x) {
   if (x.matches) { // If media query matches
     document.body.style.backgroundColor = "yellow";
