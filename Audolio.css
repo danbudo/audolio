@@ -561,7 +561,7 @@ main {
     background-color: #f1f3f4;
     color: #262626;
 }
-.siteHeader nav>.tab.active:before,.siteHeader nav>.tab.project:before {
+.siteHeader nav>.tab.active:before, .project .siteHeader nav>.tab.project:before {
     border-top-color: rgba(38, 38, 38, 0.2);
 }
 .tab.active:before {background-color: transparent;}
