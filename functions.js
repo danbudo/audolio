@@ -15,3 +15,18 @@ $(document).ready(function() {
 	var pathname = window.location.pathname;
 	$('nav > a[href="'+pathname+'"]').addClass('active');
 })
+
+// Remove "expanded" class on mobile, until clicked
+
+<script>
+function collapseMenuMobile(x) {
+  if (x.matches) { // If media query matches
+    document.body.style.backgroundColor = "yellow";
+  } else {
+   document.body.style.backgroundColor = "pink";
+  }
+}
+
+var x = window.matchMedia("(max-width: 736px)")
+collapseMenuMobile(x) // Call listener function at run time
+x.addListener(collapseMenuMobile) // Attach listener function on state changes
