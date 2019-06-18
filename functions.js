@@ -2,12 +2,12 @@
 
 // Add and remove "active" class to secondary navigation items
 
-$(document).ready(function(){
-  $('.secondaryNavLink').click(function(){
-    $('secondaryNavLink').removeClass("active");
-    $(this).addClass("active");
+$(document).ready(function () {
+	$('.secondaryNavLink').click(function () {
+		$('secondaryNavLink').removeClass("active");
+		$(this).addClass("active");
+	});
 });
-  });      
 
 // expand and collapse Secondary Nav
 
@@ -18,8 +18,8 @@ function expandCollapse() {
 
 // Remove "expanded" class on mobile, until clicked
 
-//$(document).ready(function () {
-//        if($(window).width() < 768) {
-//           $("#secondaryNav").removeClass("expandMenu");  
-//        }    
-//    });
+$(document).ready(function () {
+	if ($(window).width() < 768) {
+		$("#secondaryNav").removeClass("expandMenu");
+	}
+});
