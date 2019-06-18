@@ -4,14 +4,10 @@
 
 $(document).ready(function(){
   $('.secondaryNavLink').click(function(){
-    $('.secondaryNavLink').removeClass('active');
-    $(this).addClass('active');
+    $('secondaryNavLink').removeClass("active");
+    $(this).addClass("active");
 });
-	
-	        if($(window).width() < 768) {
-           $("#secondaryNav").removeClass("expandMenu");  
-        }    
-});
+  });      
 
 // expand and collapse Secondary Nav
 
