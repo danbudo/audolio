@@ -495,7 +495,7 @@ main {
 .secondaryNav {
     padding: 0;
     border: none;
-    transition: 1s;
+    transition: 0.5s;
     background-color: #fff;
 }
 .secondaryNav.expandMenu>nav {
@@ -625,6 +625,6 @@ main {
     grid-template-rows: auto auto auto auto auto auto;
     grid-gap: 0;
     height: 100vh;
-    min-width: 375px;
+    min-width: 320px;
 }
 }
