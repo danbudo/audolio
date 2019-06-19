@@ -375,7 +375,7 @@ address a:hover {
     border-top: 1px solid #333;
 }
 /* Contact Modal */
-.modal.contactMe {
+.contactModal {
     position: absolute;
     top: 64px;
     right: 0;
@@ -389,13 +389,13 @@ address a:hover {
     -moz-box-shadow: 0px 5px 5px 2px rgba(34,2,0,0.3);
     box-shadow: 0px 5px 8px 0px rgba(34, 34, 34, 0.1);
     }
-.modal.contactMe.expandMenu {
+.contactModal.expandMenu {
     max-height:600px;
 }
-.modal.contactMe,.modal.contactMe a {
+.contactModal,.modal.contactMe a {
     color: var(--DarkGrey);
 }
-.modal.contactMe address {
+.contactModal address {
     display:block;
     padding:2rem;
     background-color: #fff;
@@ -654,7 +654,7 @@ main {
     padding: 1rem 2rem;
 }
 /* contact modal */
-.modal.contactMe {
+.contactModal {
     width:100%;
     top: 49px;
 }
