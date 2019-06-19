@@ -22,8 +22,11 @@ $(function(){
 
 // expand and collapse Secondary Nav
 
-function expandCollapse() {
+function expandCollapseNav() {
 	var element = document.getElementById("secondaryNav");
+	element.classList.toggle("expandMenu");
+}
+function expandCollapseModal() {
 	var element = document.getElementById("contactModal");
 	element.classList.toggle("expandMenu");
 }
