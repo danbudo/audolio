@@ -130,6 +130,12 @@ h2 {
 }
 h3 {
 }
+a {
+    color:inherit;
+}
+a:focus {
+    outline:none;
+}
 /* Bespoke styling */
 main {
     height: 100%;
@@ -153,11 +159,12 @@ nav {
     min-width: 300px;
     display: flex;
     justify-content: space-between;
+    position: relative;
 }
 .tab.active {
     color: #fff;
 }
-.tab.active:before, .project .tab.project:before {
+.tab.active:before,.tab:hover:before, .project .tab.project:before {
     content: "";
     display: block;
     width: 100%;
@@ -198,6 +205,7 @@ nav>a {
 }
 .primaryNav a {
     color: #f1f3f4;
+    transition: 0.2s;
 }
 nav>a:hover {
     color: #fff;
@@ -350,6 +358,7 @@ address {
     text-transform: initial;
     font-style: normal;
 }
+
 address a {
     color: #fff;
     transition: color 0.5s;
@@ -367,7 +376,25 @@ address a:hover {
 }
 /* Contact Modal */
 .modal.contactMe {
-    display: none;
+    position: absolute;
+    top: 49px;
+    right: 0;
+    z-index: 1;
+    font-size: 1.17rem;
+    transition: 0.75s;
+    overflow: hidden;
+    max-height: 0;
+    }
+.modal.contactMe.expandMenu {
+    max-height:600px;
+}
+.modal.contactMe,.modal.contactMe a {
+    color: var(--DarkGrey);
+}
+.modal.contactMe address {
+    display:block;
+    padding:2rem;
+    background-color: #fff;
 }
 /* Grid */
 main {
@@ -412,7 +439,6 @@ main {
 }
 .chikbudo .heroImage {
     background-image: url('img/CB_bg.png');
-    background-position: 0 -72px;
 }
 /* Colour variants */
 
@@ -430,10 +456,10 @@ main {
 .newGods {
 }
 /* Chik Budo */
-.chikbudo, .chikbudo .tab.active:before, .chikbudo .tab.project:before {
+.chikbudo, .chikbudo .tab:hover:before, .chikbudo .tab.project:before {
     background-color: var(--CBCol);
 }
-.chikbudo .tab.active, .chikbudo .blurb li, .chikbudo nav>a:hover, .chikbudo .tab.project {
+.chikbudo .blurb li, .chikbudo nav>a:hover, .chikbudo .tab.project {
     color: var(--CBCol);
 }
 .chikbudo .secondary>.active, .chikbudo .productionNotes {
@@ -538,8 +564,8 @@ main {
     top: 0;
 }
 .siteHeader nav>.tab.active, .project .siteHeader nav>.tab.project {
-    background-color: #f1f3f4;
-    color: #262626;
+    background-color: #666;
+    color: #f1f3f4;
 }
 .siteHeader nav>.tab.active:before, .project .siteHeader nav>.tab.project:before {
     border-top-color: rgba(38, 38, 38, 0.2);
@@ -616,6 +642,10 @@ main {
 }
 .smallPrint {
     padding: 1rem 2rem;
+}
+/* contact modal */
+.modal.contactMe {
+    width:100%;
 }
 /* Mobile Grid Layout */
 main {
