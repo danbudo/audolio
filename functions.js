@@ -24,6 +24,7 @@ $(function(){
 
 function expandCollapse() {
 	var element = document.getElementById("secondaryNav");
+	var element = document.getElementById("contactModal");
 	element.classList.toggle("expandMenu");
 }
 
