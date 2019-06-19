@@ -1,6 +1,6 @@
 // JavaScript Document
 
-// Add and remove "active" class to secondary navigation items
+// Add and remove "active" class when an "active" link is already present - ie the first tab of the home page 
 
 //$(document).ready(function () {
 	//$('.secondaryNavLink').click(function () {
@@ -9,7 +9,9 @@
 	//});
 //});
 
-$(function(){
+// Add and remove "active" class to secondary navigation items when URL is matched to link
+
+$(document).ready(function () {
     var current = location.pathname;
     $('#secondaryNav a').each(function(){
         var $this = $(this);
@@ -23,11 +25,7 @@ $(function(){
 // expand and collapse elements
 
 function expandCollapseNav() {
-	var element = document.getElementById("secondaryNav");
-	element.classList.toggle("expandMenu");
-}
-function expandCollapseModal() {
-	var element = document.getElementById("contactModal");
+	var element = document.getElementsByClassName('secondaryNav contactModal');
 	element.classList.toggle("expandMenu");
 }
 
