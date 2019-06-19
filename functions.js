@@ -20,7 +20,7 @@ $(function(){
     })
 })
 
-// expand and collapse Secondary Nav
+// expand and collapse elements
 
 function expandCollapseNav() {
 	var element = document.getElementById("secondaryNav");
