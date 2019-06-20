@@ -26,7 +26,7 @@ $(document).ready(function () {
 
 function expandCollapseNav() {
 	var elements = document.getElementsByClassName('secondaryNav contactModal');
-	element.classList.toggle("expandMenu");
+	elements.classList.toggle("expandMenu");
 }
 
 // Remove "expanded" class on mobile, until clicked
