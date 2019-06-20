@@ -463,7 +463,7 @@ main {
 .chikbudo .productionNotes {
     border-color: var(--CBCol);
 }
-.chikbudo .secondary>.active,.project .secondaryNav[href*="chikbudo"] {
+.chikbudo .secondary>.active,.chikbudo a[href*="chikbudo"] {
     border-top:5px solid var(--CBCol);
     background-color:white;
 }
