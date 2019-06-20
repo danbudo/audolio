@@ -11,16 +11,22 @@
 
 // Add and remove "active" class to secondary navigation items when URL is matched to link
 
-$(document).ready(function () {
-    var current = location.pathname;
-    $('#secondaryNav a').each(function(){
-        var $this = $(this);
-        // if the current path is like this link, make it active
-        if($this.attr('href').indexOf(current) !== -1){
-            $this.addClass('active');
+$(function () {
+    setNavigation();
+});
+
+function setNavigation() {
+    var path = window.location.pathname;
+    path = path.replace(/\/$/, "");
+    path = decodeURIComponent(path);
+
+    $(".secondaryNavLink").each(function () {
+        var href = $(this).attr('href');
+        if (path.substring(0, href.length) === href) {
+            $(this).closest('a').addClass('active');
         }
-    })
-})
+    });
+}
 
 // expand and collapse Secondary Nav
 
