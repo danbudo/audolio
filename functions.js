@@ -22,11 +22,18 @@ $(document).ready(function () {
     })
 })
 
-// expand and collapse elements
+// expand and collapse Secondary Nav
 
-function expandCollapse() {
-	var elements = document.getElementsByClassName('secondaryNav contactModal');
-	elements.classList.toggle("expandMenu");
+function expandCollapseNav() {
+	var element = document.getElementById("secondaryNav");
+	element.classList.toggle("expandMenu");
+}
+
+// expand and collapse Contact Modal
+
+function expandCollapseModal() {
+	var element = document.getElementById("contactModal");
+	element.classList.toggle("expandMenu");
 }
 
 // Remove "expanded" class on mobile, until clicked
