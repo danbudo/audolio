@@ -450,21 +450,8 @@ main {
 .chikbudo .heroImage {
     background-image: url('img/CB_bg.png');
 }
-/* Colour variants */
+/* Colour variants by project */
 
-/* Ecstatic Temple */
-.ecstaticTemple, .ecstaticTemple .tab.active:before {
-    background-color: var(--ETCol);
-}
-.ecstaticTemple .tab.active, .ecstaticTemple .blurb li, .ecstaticTemple nav>a:hover {
-    color: var(--ETCol);
-}
-.ecstaticTemple .secondary>.active, .ecstaticTemple .productionNotes {
-    border-color: var(--ETCol);
-}
-/* New Gods */
-.newGods {
-}
 /* Chik Budo */
 .chikbudo, .chikbudo .tab:hover:before, .chikbudo .tab.project:before {
     background-color: var(--CBCol);
@@ -472,8 +459,12 @@ main {
 .chikbudo .blurb li, .chikbudo nav>a:hover, .chikbudo .tab.project {
     color: var(--CBCol);
 }
-.chikbudo .secondary>.active, .chikbudo .productionNotes {
+.chikbudo .productionNotes {
     border-color: var(--CBCol);
+}
+.chikbudo .secondary>.active,.project .secondaryNav[href*="chikbudo"] {
+    border-top:5px solid var(--CBCol);
+    background-color:white;
 }
 /* Resolve header loading "flashing" bug */
 body:before {
