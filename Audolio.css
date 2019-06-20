@@ -446,7 +446,6 @@ main {
 .heroImage {
     background-size: initial;
     background-repeat: no-repeat;
-    background-color: var(--DarkGrey);
 }
 .chikbudo .heroImage {
     background-image: url('img/CB_bg.png');
