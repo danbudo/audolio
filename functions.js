@@ -36,7 +36,15 @@ function expandCollapseModal() {
 	element.classList.toggle("expandMenu");
 }
 
-// Remove "expanded" class on mobile, until clicked
+// remove all .active classes when clicked anywhere
+
+hide = true;
+$('body').on("click", function () {
+    if (hide) $('.primary a').removeClass('expandMenu');
+    hide = true;
+});
+
+// Remove "expanded" class as default on small screens 
 
 $(document).ready(function () {
 	if ($(window).width() < 768) {
