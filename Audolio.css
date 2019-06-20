@@ -392,7 +392,7 @@ address a:hover {
 .contactModal.expandMenu {
     max-height:600px;
 }
-.contactModal,.modal.contactMe a {
+.contactModal,.contactModal a {
     color: var(--DarkGrey);
 }
 .contactModal address {
