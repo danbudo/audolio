@@ -161,10 +161,10 @@ nav {
     justify-content: space-between;
     position: relative;
 }
-.tab.active {
+.tab.active,.home a[href*="index"] {
     color: #fff;
 }
-.tab.active:before,.tab:hover:before, .project .tab.project:before {
+.tab.active:before,.home a.home:before,.project .tab.project:before,.tab:hover:before {
     content: "";
     display: block;
     width: 100%;
