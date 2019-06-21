@@ -395,6 +395,10 @@ address a:hover {
 .contactModal,.contactModal a {
     color: var(--DarkGrey);
 }
+.contactModal a:hover {
+    color:#000;
+    text-decoration: none;
+}
 .contactModal address {
     display:block;
     padding:2rem;
