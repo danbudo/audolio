@@ -595,12 +595,12 @@ main {
 /* Hero Images by page */
 
 .heroImage {
-    background-size: initial;
+    background-size: auto 100%;
     background-repeat: no-repeat;
 }
 
 .chikbudo .heroImage {
-    background-image: url('img/CB_bg_web_opt.png');
+    background-image: url('img/CB_bg_web.gif');
 }
 
 
