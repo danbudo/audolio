@@ -212,7 +212,6 @@ body {
     background-color: var(--DarkGrey);
     color: #f1f3f4;
     line-height: 4rem;
-    padding: 0 4rem;
     text-transform: uppercase;
 }
 
@@ -248,10 +247,9 @@ nav {
 
 .secondaryNav {
     width: 100%;
-    background-color: #f1f3f4;
-    padding: 0 4rem;
+    /* background-color: #f1f3f4; */
     color: var(--DarkGrey);
-    border-top: 5px solid rgba(34, 34, 34, 0.7);
+    /* border-top: 5px solid rgba(34, 34, 34, 0.7); */
 }
 
 .secondaryNav a:hover {
@@ -303,8 +301,8 @@ nav>a:hover {
     padding: 1em;
     flex-grow: 1;
     text-align: center;
-    margin-top: -5px;
-    border-top: 5px solid rgba(34, 34, 34, 0.3);
+    border-top: 5px solid rgba(34, 34, 34, 0.5);
+    transition: 0.2s;
 }
 
 .secondary>a:before {
@@ -330,7 +328,7 @@ nav>a:hover {
 .contentHeader {
     padding: 1rem 0 1.5rem;
     border-top: 2px solid var(--DarkGrey);
-    margin: 2rem 4rem 0 0;
+    margin: 2rem 0 0 4rem;
 }
 
 .contentHeader h3 {
@@ -365,8 +363,9 @@ nav>a:hover {
 .blurb section {
     border-top: 1px solid var(--DarkGrey);
     padding: 2rem 0;
+    
 }
-
+.content {margin: 0 4rem;}
 .blurb h3 {
     margin-bottom: 1em;
 }
@@ -431,7 +430,7 @@ audio {
 }
 
 .blurb {
-    margin-right: 4rem;
+    /* margin-right: 4rem; */
 }
 
 
@@ -445,9 +444,11 @@ audio {
 }
 
 .footerFlexContent {
-    display: flex;
-    padding: 2rem;
+    display: grid;
     background-color: var(--DarkGrey);
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 4rem;
+    padding: 3rem 0;
 }
 
 .siteFooter h3 {
@@ -459,8 +460,6 @@ audio {
 }
 
 .siteFooter section {
-    flex-grow: 1;
-    margin: 0 2rem 0;
 }
 
 .siteFooter ul {
@@ -486,7 +485,7 @@ address a:hover {
 
 .smallPrint {
     font-size: 0.75rem;
-    padding: 1.5rem 4rem 1rem;
+    padding: 1.5rem 0 1rem;
     color: #999;
     background-color: rgb(34, 34, 34);
     border-top: 1px solid #333;
@@ -545,18 +544,28 @@ address a:hover {
 
 main {
     display: grid;
-    grid-template-areas: "header header header" "secondaryNav secondaryNav secondaryNav" "hero contentHeader contentHeader" "hero content aside" "footer footer footer";
-    grid-template-columns: minmax(0, 300px) minmax(600px, 1fr) minmax(364px, 600px);
+    grid-template-columns: minmax(4rem, 300px) minmax(857px, 2fr) minmax(300px, 0.5fr) 4rem;
     grid-template-rows: auto auto auto 1fr auto;
-    grid-gap: 0 4rem;
+    grid-gap: 0;
     height: 100vh;
 }
+main {
+  margin-top: -69px;
+}
+/* Grid Areas */
 
-
-/* Grid Items */
-
+main {
+    grid-template-areas: 
+    ". header header ." 
+    ". secondaryNav secondaryNav ." 
+    "hero contentHeader contentHeader ." 
+    "hero content aside ." 
+    ". footer footer ."
+    ;
+}
 .siteHeader {
     grid-area: header;
+    z-index: 1;
 }
 
 .secondaryNav {
@@ -571,7 +580,7 @@ main {
     grid-area: contentHeader;
 }
 
-.mainContent {
+.content {
     grid-area: content;
 }
 
@@ -583,6 +592,26 @@ main {
     grid-area: footer;
 }
 
+#headerBg, #navigationBg,#footerBg {
+    content:"";
+    display:block;
+    margin:0;
+    border: none;
+    grid-column: 1/-1;
+}
+#headerBg {
+  background-color:#222222;
+  grid-row: 1/1;
+}
+#navigationBg {
+  background-color:#f1f3f4;
+  border-top: 5px solid rgba(34, 34, 34, 0.75);
+  grid-row: 2/2;
+}
+#footerBg {
+    background-color: #222222;
+    grid-row: 5/5;
+}
 
 /* Flex layouts */
 
@@ -641,16 +670,12 @@ body:before {
     height: 69px;
 }
 
-#siteHeader {
-    margin-top: -69px;
-}
-
 
 /* Media Queries */
 
 @media (max-width: 1400px) {
     main {
-        grid-template-columns: minmax(0, 300px) minmax(542px, 1fr) 364px;
+        /* grid-template-columns: minmax(0, 300px) minmax(542px, 1fr) 364px; */
         max-width: 1350px;
     }
 }
@@ -663,8 +688,11 @@ body:before {
         display: flex;
         flex-direction: column;
     }
-    #siteHeader {
+    main {
         margin-top: 0;
+    }
+    #headerBg, #navigationBg,#footerBg {
+        display:none;
     }
     .siteHeader {
         padding: 0;
@@ -761,6 +789,7 @@ body:before {
     .content {
         border-top: none;
         padding: 0;
+        margin: 0;
     }
     .heroImage {
         background-size: cover;
@@ -808,10 +837,13 @@ body:before {
     }
     .footerFlexContent {
         flex-direction: column;
+        display: flex;
+        padding: 1.25rem 0;
     }
     .siteFooter section {
         margin: 0 0 3rem;
         flex-grow: unset;
+        padding: 0 2rem;
     }
     .siteFooter section:last-child {
         margin-bottom: 1rem;
@@ -826,7 +858,7 @@ body:before {
     }
     /* mobile BG images by page */
     .chikbudo .heroImage {
-        background-image: url('img/CB_bg_mobile_opt.png');
+        background-image: url('img/CB_bg_mobile.png');
     }
     /* Mobile Grid Layout */
     main {
