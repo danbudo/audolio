@@ -313,6 +313,7 @@ nav>a:hover {
     top: -5px;
     border-left: 1px solid rgba(156, 156, 156, 0.3);
     width: 0;
+    margin-left:-1px
 }
 
 .secondary>a:hover {
