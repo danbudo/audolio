@@ -607,6 +607,7 @@ main {
   background-color:#f1f3f4;
   border-top: 5px solid rgba(34, 34, 34, 0.75);
   grid-row: 2/2;
+  height: 51px;
 }
 #footerBg {
     background-color: #222222;
