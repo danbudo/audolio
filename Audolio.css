@@ -193,9 +193,11 @@ nav {
 .secondaryNav {
     width: 100%;
     color: var(--DarkGrey);
+    transition: 0.5s;
 }
 .secondaryNav.expandMenu {
-    height: 51px;
+    height: 100%;
+    max-height: 51px;
 }
 .secondaryNav a:hover {
     color: #000;
@@ -487,8 +489,12 @@ main {
 }
 #navigationBg {
     background-color: #f1f3f4;
-    border-top: 5px solid rgba(34, 34, 34, 0.75);
     grid-row: 2/2;
+}
+#navigationBg:before {
+    content:"";
+    display:block;
+    border-top: 5px solid rgba(34, 34, 34, 0.75);
 }
 .expandMenu+navigationBg {
     height: 51px;
@@ -595,6 +601,7 @@ body:before {
 }
 #secondaryNav a {
     background-color: transparent;
+    border-top: 1px solid rgba(38, 38, 38, 0.08);
 }
 .secondary a:hover {
     background-color: #fff;
@@ -645,7 +652,7 @@ main {
     justify-content: space-evenly;
 }
 .siteHeader nav {
-    background-color: #262626;
+    background-color: rgba(34, 34, 34, 0.8);
     padding: 0;
     margin-top: 5px;
     position: static;
@@ -666,7 +673,7 @@ main {
     top: 0;
 }
 .home .tab.home, .project .tab.project {
-    background-color: #666;
+    background-color: rgba(255, 255, 255, 0.15);
     color: #f1f3f4;
 }
 .siteHeader nav>.tab.active:before,  .project .siteHeader nav>.tab.project:before {
@@ -677,6 +684,9 @@ main {
 }
 .secondaryNav {
     background-color: #fff;
+}
+.secondaryNav.expandMenu {
+    max-height:400px;
 }
 .secondaryNav>.secondary {
     width: 100%;
