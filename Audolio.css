@@ -794,7 +794,8 @@ body:before {
         background-color: #262626;
         padding: 0;
         margin-top: 5px;
-        position: static;
+        position: relative;
+        right: 0;
     }
     
     .siteHeader nav>.tab {
