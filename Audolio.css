@@ -10,6 +10,7 @@
     --OriginalYellow: #f7da3e;
     --ETCol: #ffc420;
     --CBCol: #4B9DBE;
+    --MagpieCol: #6aad43;
 }
 
 
@@ -631,7 +632,9 @@ main {
 .chikbudo .heroImage {
     background-image: url('img/CB_bg_web.gif');
 }
-
+.magpie .heroImage {
+    background-image: url('img/magpie_bg_web.png');
+}
 
 /* Colour variants by project */
 
@@ -657,6 +660,29 @@ main {
 .chikbudo .secondary>.active,
 .chikbudo a[href*="chikbudo"] {
     border-top: 5px solid var(--CBCol);
+    background-color: white;
+}
+/* The Magpie */
+
+.magpie,
+.magpie .tab:hover:before,
+.magpie .tab.project:before {
+    background-color: var(--MagpieCol);
+}
+
+.magpie .blurb li,
+.magpie nav>a:hover,
+.magpie .tab.project {
+    color: var(--MagpieCol);
+}
+
+.magpie .productionNotes {
+    border-color: var(--MagpieCol);
+}
+
+.magpie .secondary>.active,
+.magpie a[href*="magpie"] {
+    border-top: 5px solid var(--MagpieCol);
     background-color: white;
 }
 
@@ -859,6 +885,9 @@ body:before {
     /* mobile BG images by page */
     .chikbudo .heroImage {
         background-image: url('img/CB_bg_mobile.png');
+    }
+    .magpie .heroImage {
+        background-image: url('img/magpie_bg_mobile.png');
     }
     /* Mobile Grid Layout */
     main {
