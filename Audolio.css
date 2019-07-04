@@ -10,7 +10,7 @@
     --OriginalYellow: #f7da3e;
     --ETCol: #ffc420;
     --CBCol: #4B9DBE;
-    --MagpieCol: #6aad43;
+    --MagpieCol: #7bb50e;
 }
 
 
@@ -603,8 +603,8 @@ main {
   grid-row: 1/1;
 }
 #navigationBg {
-  background-color:#f1f3f4;
-  border-top: 5px solid rgba(34, 34, 34, 0.75);
+  /* background-color:#f1f3f4; */
+  border-top: 5px solid rgba(34, 34, 34, 0.5);
   grid-row: 2/2;
 }
 #footerBg {
@@ -661,7 +661,7 @@ main {
     background-color: white;
 }
 /* The Magpie */
-
+.magpie * {}
 .magpie,
 .magpie .tab:hover:before,
 .magpie .tab.project:before {
@@ -706,16 +706,17 @@ body:before {
     border: none;
     transition: 0.5s;
 }
-.secondaryNav .secondary {width:300px;
+.secondaryNav .secondary {
+    width:300px;
     position:absolute;
     right:2rem;
     background-color: #f1f3f4;
     z-index: 1;
     border: none;
     border-top: 5px solid var(--CBCol);
-    -webkit-box-shadow: 0px 5px 5px 2px rgba(34, 2, 0, 0.3);
+    -webkit-box-shadow: 0px 5px 8px 0px rgba(34, 34, 34, 0.3);
     -moz-box-shadow: 0px 5px 5px 2px rgba(34, 2, 0, 0.3);
-    box-shadow: 0px 5px 8px 0px rgba(34, 34, 34, 0.1);
+    box-shadow: 0px 5px 8px 0px rgba(34, 34, 34, 0.3);
     }
 .secondaryNav.expandMenu>.secondary {
     max-height: 400px;
@@ -730,11 +731,12 @@ body:before {
     margin: 0;
     padding: 1em;
     border: none;
-        border-top: 1px solid rgba(38, 38, 38, 0.08);
+        
         text-align: left;
 }
 #secondaryNav a {
     background-color:transparent;
+    border-top: 1px solid rgba(38, 38, 38, 0.08);
 }
 .secondary a:hover {
         background-color: #fff;
@@ -791,7 +793,7 @@ body:before {
         justify-content: space-evenly;
     }
     .siteHeader nav {
-        background-color: #262626;
+        background-color: rgba(34, 34, 34, 0.8);
         padding: 0;
         margin-top: 5px;
         position: relative;
@@ -815,7 +817,7 @@ body:before {
         top: 0;
     }
     .home .tab.home,.project .tab.project {
-        background-color: #666;
+        background-color: rgba(255, 255, 255, 0.1);
         color: #f1f3f4;
     }
     .siteHeader nav>.tab.active:before,
