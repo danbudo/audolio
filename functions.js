@@ -1,13 +1,13 @@
 // JavaScript Document
 
-// Add and remove "active" class when an "active" link is already present - ie the first tab of the home page 
-
-//$(document).ready(function () {
-	//$('.secondaryNavLink').click(function () {
-		//$('secondaryNavLink').removeClass("active");
-		//$(this).addClass("active");
-	//});
-//});
+document.addEventListener('play', function(e){
+    var audios = document.getElementsByTagName('audio');
+    for(var i = 0, len = audios.length; i < len;i++){
+        if(audios[i] != e.target){
+            audios[i].pause();
+        }
+    }
+}, true);
 
 // expand and collapse Secondary Nav
 
@@ -30,3 +30,12 @@ $(document).ready(function () {
 		$("#secondaryNav").removeClass("expandMenu");
 	}
 });
+
+// Add and remove "active" class when an "active" link is already present - ie the first tab of the home page 
+
+//$(document).ready(function () {
+	//$('.secondaryNavLink').click(function () {
+		//$('secondaryNavLink').removeClass("active");
+		//$(this).addClass("active");
+	//});
+//});
