@@ -601,6 +601,7 @@ main {
 #headerBg {
   background-color:#222222;
   grid-row: 1/1;
+  height: 64px;
 }
 #navigationBg {
   background-color:#f1f3f4;
