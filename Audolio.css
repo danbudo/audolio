@@ -265,7 +265,6 @@ nav {
 
 .secondaryNav.expandMenu>nav {
     max-height: 60px;
-    overflow: visible;
     opacity: 1;
 }
 
@@ -313,7 +312,6 @@ nav>a:hover {
     top: -5px;
     border-left: 1px solid rgba(156, 156, 156, 0.3);
     width: 0;
-    margin-left:-1px
 }
 
 .secondary>a:hover {
@@ -608,7 +606,10 @@ main {
   background-color:#f1f3f4;
   border-top: 5px solid rgba(34, 34, 34, 0.75);
   grid-row: 2/2;
-  height: 51px;
+
+}
+.expandMenu+navigationBg {
+      height: 51px;
 }
 #footerBg {
     background-color: #222222;
