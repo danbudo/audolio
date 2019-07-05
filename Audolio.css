@@ -518,11 +518,11 @@ main {
 /* Hero Images by page */
 
 .heroImage {
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 .chikbudo .heroImage {
-    background-image: url('img/CB_bg_web.gif');
+    background-image: url('img/CB_bg_web.png');
 }
 .magpie .heroImage {
     background-image: url('img/magpie_bg_web.png');
