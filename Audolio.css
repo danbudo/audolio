@@ -172,6 +172,7 @@ body {
     background-color: rgba(0, 0, 0, 0.1);
     min-height: 16em;
 }
+/* Primary Nav */
 nav {
     min-width: 300px;
     display: flex;
@@ -190,26 +191,38 @@ nav {
     background-color: #fff;
     bottom: 16px;
 }
-.secondaryNav {
+/* secondary Nav */
+.secondaryNav,#navigationBg {
     width: 100%;
     color: var(--DarkGrey);
     transition: 0.5s;
+    height: 100%;
+    max-height: 0;
+    overflow: hidden;
 }
-.secondaryNav.expandMenu {
+.secondaryNav.expandMenu,.expandMenu+#navigationBg {
     height: 100%;
     max-height: 51px;
 }
 .secondaryNav a:hover {
     color: #000;
 }
-.secondaryNav>nav {
+.secondaryNav>.secondary {
     border-right: 1px solid rgba(156, 156, 156, 0.3);
     max-height: 0;
-    overflow: hidden;
-    transition: 0.7s;
     opacity: 0;
+    transition: 0.5s;
 }
-.secondaryNav.expandMenu>nav {
+#navigationBg {
+    height: 100%;
+    max-height:0;
+}
+#navigationBg:before {
+    content:"";
+    display:block;
+    border-top: 5px solid rgba(34, 34, 34, 0.75);
+}
+.secondaryNav.expandMenu>.secondary {
     max-height: 60px;
     opacity: 1;
 }
@@ -426,7 +439,7 @@ address a:hover {
     padding: 2rem;
     background-color: #fff;
     border: 1px solid rgba(34, 34, 34, 0.28);
-    border-top: 5px solid var(--CBCol);
+    /* border-top: 5px solid var(--CBCol); */
     background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 100%);
     /* FF3.6-15 */
     background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 100%);
@@ -491,14 +504,7 @@ main {
     background-color: #f1f3f4;
     grid-row: 2/2;
 }
-#navigationBg:before {
-    content:"";
-    display:block;
-    border-top: 5px solid rgba(34, 34, 34, 0.75);
-}
-.expandMenu+navigationBg {
-    height: 51px;
-}
+
 #footerBg {
     background-color: #222222;
     grid-row: 5/5;
@@ -572,15 +578,19 @@ body:before {
     padding: 0;
     border: none;
     transition: 0.5s;
+    height: 0;
+}
+.expandMenu+#navigationBg {
+    max-height:0;
 }
 .secondaryNav .secondary {
-    width: 300px;
+    /* width: 300px; */
     position: absolute;
     right: 2rem;
     background-color: #f1f3f4;
     z-index: 1;
     border: none;
-    border-top: 5px solid var(--CBCol);
+    /* border-top: 5px solid var(--CBCol); */
     -webkit-box-shadow: 0px 5px 5px 2px rgba(34, 2, 0, 0.3);
     -moz-box-shadow: 0px 5px 5px 2px rgba(34, 2, 0, 0.3);
     box-shadow: 0px 5px 8px 0px rgba(34, 34, 34, 0.1);
@@ -655,7 +665,8 @@ main {
     background-color: rgba(34, 34, 34, 0.8);
     padding: 0;
     margin-top: 5px;
-    position: static;
+    position: relative;
+    right: 0;
 }
 .siteHeader nav>.tab {
     flex-grow: 1;
